@@ -19,6 +19,12 @@ class ProductController {
 
     @Autowired
     private val productService: ProductService? = null
+    
+    @ApiOperation(value = "Greeting")
+    @GetMapping("/greeting")
+    fun greetUser(): String {
+        return "Hello, Welcome to insurance app"
+    }
 
     @ApiOperation(value = "Get all the products")
     @GetMapping("/products")
